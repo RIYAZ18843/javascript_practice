@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body bgcolor="red">
+    <center>
+      <h1>Arrays in javascript</h1>
+      <script>
+        //array is an object that represents a collection of similar type of elements.
+        //There are 3 ways to construct array in JavaScript
+        //1.By array literal:-
+        //    var students = ["riyaz","javid","sai"];
+        //    for(i=0;i<students.length;i++){
+        //     document.write(students[i]+"<br>")
+        //    }
+
+        //2.Array directly (new keyword)
+        //syntax:-var arrayname=new Array();  //new keyword is used to create instance of array.
+        // var i;
+        // var stu = new Array();
+        // stu[0]="Virat"
+        // stu[1]="Rohit"
+        // stu[2]="Jadeja"
+        // stu[3]="Akshar"
+        // for(i=0;i<stu.length;i++){
+        //     document.write(stu[i] + "<br>")
+        // }
+
+        //3. array constructor (new keyword)
+        //Here, you need to create instance of array by passing arguments in constructor so that we don't have to provide value explicitly.
+        var emp = new Array("Jai", "Vijay", "Smith");
+        for (i = 0; i < emp.length; i++) {
+          document.write(emp[i] + "<br>");
+        }
+      </script>
+    </center>
+  </body>
+</html>
