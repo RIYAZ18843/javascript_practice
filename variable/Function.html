@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body bgcolor="pink">
+    <center>
+        <h1>Function in javascript</h1>
+        <script>
+            //1. Function Declaration
+            function hello(){
+                console.log("Hello function")
+            }
+            // Calling the function
+            hello();
+
+            // Function with parameters
+            function greet(name) {
+            console.log("Hello, " + name + "!");
+            }
+           // Calling the function with an argument
+           greet("Riyaz"); // Outputs: Hello, Riyaz!
+
+           // Function that returns a value
+           function add(a, b) {
+              return a + b;
+           }   
+          // Calling the function and using the return value
+          let result = add(3, 4); // result is 7
+          console.log(result); // Outputs: 7
+
+          //2. Function expression:-assigning function to a variable
+          let x = function(name) {
+          console.log("Hello, " + name + "!");
+          };
+         // Calling the function
+         x("Virat"); // Outputs: Hello, Virat!
+         const y = () => {
+            console.log("Hello, world!");
+         };
+         y();
+
+         //Functions that are executed immediately after their definition.
+         //IIFE
+         (function() {
+            console.log("Hello, IIFE!");
+         })();
+
+         //Functions without a name, often used as arguments to other functions
+         setTimeout(function() {
+              console.log("Hello, React!");
+         }, 2000);
+
+         
+
+
+
+
+
+
+        </script>
+    </center>
+</body>
+</html>
