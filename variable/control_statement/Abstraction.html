@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class ATM{
+            constructor(withdraw){
+                this.balance=1000;
+        
+                this.withdraw=withdraw;
+
+            }
+            getAmount(){
+                let minimum=500;
+                if((this.balance-this.withdraw)>=this.minimum){
+                    console.log("withdraw successful");
+                }
+                else{
+                    console.log("withdraw Failed");
+                }
+            }
+        }
+            let obj = new ATM(500)
+            console.log(obj.minimum)
+            obj.getAmount();
+    </script>
+</body>
+</html>
