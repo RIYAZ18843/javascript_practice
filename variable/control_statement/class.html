@@ -1,59 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Classes in JavaScript</title>
-  </head>
-  <body bgcolor="yellow">
-    <center>
-      <h1>Classes in JavaScript</h1>
-      <script>
-        // Define a class named "mobile"
-        class mobile {
-          // Constructor to initialize properties of the class
-          constructor(name, price, ram) {
-            this.name = name;
-            this.price = price;
-            this.ram = ram;
-          }
-        }
+// Define a class named 'Car'
+class Car {
+  // Constructor function to initialize object properties
+  constructor(make, model, year) {
+    this.make = make;       // Property: car make (e.g., Toyota)
+    this.model = model;     // Property: car model (e.g., Camry)
+    this.year = year;       // Property: car manufacture year (e.g., 2020)
+  }
 
-        // Create instances (objects) of the class "mobile"
-        let m1 = new mobile("realme", 18000, "8gb");
-        let m2 = new mobile("redmi", 15000, "4gb");
-        let m3 = new mobile("vivo", 13000, "6gb");
+  // Method to display car information
+  displayInfo() {
+    console.log('Car: ' + this.year + ' ' + this.make + ' ' + this.model);
+  }
+}
 
-        // Output the created objects to the console
-        console.log(m1);
-        console.log(m2);
-        console.log(m3);
+// Creating instances (objects) of the Car class
+let myCar = new Car('Toyota', 'Camry', 2020);
+let anotherCar = new Car('Honda', 'Civic', 2021);
 
-        // Define a class called Person
-        class Person {
-          // Constructor method
-          constructor(name, age) {
-            // Initialize object properties
-            this.name = name;
-            this.age = age;
-          }
-
-          // Method to greet
-          greet() {
-            console.log(
-              `Hello, my name is ${this.name} and I am ${this.age} years old.`
-            );
-          }
-        }
-
-        // Create instances of Person
-        let person1 = new Person("Alice", 30);
-        let person2 = new Person("Bob", 25);
-
-        // Call the greet method on each instance
-        person1.greet(); // Output: Hello, my name is Alice and I am 30 years old.
-        person2.greet(); // Output: Hello, my name is Bob and I am 25 years old.
-      </script>
-    </center>
-  </body>
-</html>
+// Using the objects and their methods
+myCar.displayInfo();        // Output: Car: 2020 Toyota Camry
+anotherCar.displayInfo();   // Output: Car: 2021 Honda Civic

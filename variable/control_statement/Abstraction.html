@@ -1,32 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        class ATM{
-            constructor(withdraw){
-                this.balance=1000;
-        
-                this.withdraw=withdraw;
-
+        // Define an ATM abstraction using a JavaScript class
+        class ATM {
+            constructor(balance) {
+                this.balance = balance;
             }
-            getAmount(){
-                let minimum=500;
-                if((this.balance-this.withdraw)>=this.minimum){
-                    console.log("withdraw successful");
+
+            // Method to deposit money into the ATM
+            deposit(amount) {
+                this.balance += amount;
+                console.log('Deposited ' + amount + ' into ATM. New balance: ' + this.balance);
+            }
+
+            // Method to withdraw money from the ATM
+            withdraw(amount) {
+                if (amount <= this.balance) {
+                    this.balance -= amount;
+                    console.log('Withdrawn ' + amount + ' from ATM. New balance: ' + this.balance);
+                } else {
+                    console.log('Insufficient funds. Current balance: ' + this.balance);
                 }
-                else{
-                    console.log("withdraw Failed");
-                }
+            }
+
+            // Method to check balance
+            checkBalance() {
+                console.log('Current balance: ' + this.balance);
             }
         }
-            let obj = new ATM(500)
-            console.log(obj.minimum)
-            obj.getAmount();
+
+        // Example usage:
+        const myATM = new ATM(1000); // Create a new ATM instance with initial balance of 1000
+
+        myATM.deposit(500); // Deposit 500 into the ATM
+        myATM.checkBalance(); // Check the current balance
+
+        myATM.withdraw(200); // Withdraw 200 from the ATM
+        myATM.checkBalance(); // Check the current balance
+
+        myATM.withdraw(1500); // Try to withdraw more than available balance
+
     </script>
 </body>
+
 </html>
