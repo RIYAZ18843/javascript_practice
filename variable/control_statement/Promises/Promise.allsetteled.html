@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let promise1 = Promise.resolve("resolved promise");
+        let promise2 = Promise.reject("rejected promise");
+        let promise3 = new Promise((resolve, reject) => {
+            setTimeout(() => resolve(1000), 50);
+        });
+        let result = Promise.allSettled([promise1, promise2, promise3]);
+        result.then((value) => console.log(value));
+    </script>
+</body>
+</html>

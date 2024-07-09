@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const promise1 = Promise.resolve("Riyaz");
+        const promise2 = 35000;
+        const promise3 = new Promise((resolve, reject) => {
+            setTimeout(resolve, 100, "promise resolved sucessfully");
+        });
+        const promise4 = {id:1,name:"Riyaz"};
+
+        Promise.all([promise1, promise2, promise3,promise4]).then((values) => {
+            console.log(values);
+        });
+    </script>
+</body>
+</html>
